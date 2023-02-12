@@ -1,0 +1,8 @@
+## Title: Class Swap Helper
+## Version: 0.4
+## Notes: Swaps your primary and secondary class in only 2 clicks (instead of 8 clicks)
+## Author: Valacar
+
+src/ClassSwap.lua
+src/ClassSwapTemplate.xml
+src/ClassSwap.xml

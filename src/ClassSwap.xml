@@ -1,0 +1,275 @@
+<Ui xmlns="http://www.runewaker.com/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.runewaker.com/UI.xsd">
+
+	<Script file="ClassSwap.lua"/>
+	<Frame parent="UIParent" name="ClassSwapFrame" hidden="true">
+		<Scripts>
+			<OnLoad>
+				ClassSwap.onLoad(this)
+			</OnLoad>
+			<OnEvent>
+				ClassSwap.onEvent(this, event)
+			</OnEvent>
+		</Scripts>
+		<Size>
+            <AbsDimension x="400" y="400"/>
+        </Size>
+		<Anchors>
+            <Anchor point="TOP" relativePoint="TOP" relativeTo="UIParent">
+            	<Offset>
+                	<AbsDimension x="0" y="50"/>
+            	</Offset>
+            </Anchor>
+        </Anchors>
+        <Backdrop edgeFile="Interface\Tooltips\Tooltip-border" bgFile="Interface\Tooltips\Tooltip-Background">
+            <BackgroundInsets>
+                <AbsInset top="4" left="4" bottom="4" right="4"/>
+            </BackgroundInsets>
+            <EdgeSize>
+                <AbsValue val="16"/>
+            </EdgeSize>
+            <TileSize>
+                <AbsValue val="16"/>
+            </TileSize>
+        </Backdrop>
+        <Frames>
+        	<!-- TITLE FRAME  -->
+        	<Frame>
+        		<Size>
+		            <AbsDimension x="400" y="27"/>
+		        </Size>
+	            <Anchors>
+		            <Anchor point="TOP" relativePoint="TOP">
+		                <Offset>
+		                    <AbsDimension x="0" y="5"/>
+		                </Offset>
+		            </Anchor>
+		        </Anchors>
+        		<Layers>
+		            <Layer level="ARTWORK">
+		                <FontString inherits="GameFontHighlight" text="Better Class Swap">
+		                    <Anchors>
+		                        <Anchor point="CENTER" relativePoint="CENTER"/>
+		                    </Anchors>
+		                </FontString>
+		            </Layer>
+		            <Layer level="BORDER">
+		                <Texture name="$parentGlow" file="interface/transportbook/tb_highlight-01" alphaMode="ADD">
+		                    <Size>
+		                        <AbsDimension x="175" y="16"/>
+		                    </Size>
+		                    <Anchors>
+		                        <Anchor point="CENTER" relativePoint="CENTER"/>
+		                    </Anchors>
+		                    <TexCoords left="0" right="1" top="0" bottom="1"/>
+		                </Texture>
+		            </Layer>
+		        </Layers>
+        	</Frame>
+        	<!-- CURRENT CLASS FRAME -->
+        	<Frame name="ClassSwapCurrentClassFrame">
+        		<Anchors>
+		            <Anchor point="TOP" relativePoint="TOP">
+		            	<Offset>
+		                    <AbsDimension x="10" y="35"/>
+		                </Offset>
+		            </Anchor>
+		        </Anchors>
+		        <Layers>
+		            <Layer level="ARTWORK">
+		                <FontString inherits="GameFontHighlight" text="## Quick Swap: swap your main class with subclass">
+		                    <Anchors>
+		                        <Anchor point="TOPLEFT" relativePoint="TOPLEFT"/>
+		                    </Anchors>
+		                </FontString>
+		            </Layer>
+		            <Layer level="ARTWORK">
+		                <FontString name="$parent_Text" inherits="GameFontHighlight" text="===> Quick swap to [M/K] Mage / Knight">
+		                    <Anchors>
+		                        <Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+		                        	<Offset>
+					                    <AbsDimension x="5" y="15"/>
+					                </Offset>
+		                        </Anchor>
+		                    </Anchors>
+		                </FontString>
+		            </Layer>
+		        </Layers>
+		        <Frames>
+		            <Button name="$parent_Btn" inherits="UIPanelButtonTemplate" enableMouse="true" text="Quick Swap">
+				        <Size>
+				            <AbsDimension x="150" y="25"/>
+				        </Size>
+				        <Anchors>
+				            <Anchor point="TOPRIGHT" relativePoint="TOPRIGHT">
+				            	<Offset>
+				                    <AbsDimension x="-30" y="12"/>
+				                </Offset>
+				            </Anchor>
+				        </Anchors>
+				        <Scripts>
+		                    <OnClick>
+		                        ExchangeClass(EXCHANGECLASS_SUBCLASS, EXCHANGECLASS_MAINCLASS)
+		                    </OnClick>
+		                </Scripts>
+				    </Button>
+		        </Frames>
+        	</Frame>
+
+        	<!-- SEPARATOR -->
+        	<Frame inherits="ClassSwapSeparator">
+        		<Anchors>
+		            <Anchor point="TOP" relativePoint="TOP">
+		            	<Offset>
+		                    <AbsDimension x="0" y="80"/>
+		                </Offset>
+		            </Anchor>
+		        </Anchors>
+        	</Frame>
+
+        	<!-- SAVED CLASS COMBO !! -->
+        	<Frame name="ClassSwapClassComboFrame">
+        		<Anchors>
+		            <Anchor point="TOP" relativePoint="TOP">
+		            	<Offset>
+		                    <AbsDimension x="10" y="100"/>
+		                </Offset>
+		            </Anchor>
+		        </Anchors>
+		        <Layers>
+		            <Layer level="ARTWORK">
+		                <FontString inherits="GameFontHighlight" text="## Predefined class combos">
+		                    <Anchors>
+		                        <Anchor point="TOPLEFT" relativePoint="TOPLEFT"/>
+		                    </Anchors>
+		                </FontString>
+		            </Layer>		  
+		        </Layers>	
+		        <Frames>
+		        	<Frame name="ClassSwapComboItem1Frame" inherits="ClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="ClassSwapComboItem2Frame" inherits="ClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="ClassSwapComboItem3Frame" inherits="ClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="ClassSwapComboItem4Frame" inherits="ClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="ClassSwapComboItem5Frame" inherits="ClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="ClassSwapComboItem6Frame" inherits="ClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="ClassSwapComboItem7Frame" inherits="ClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="ClassSwapComboItem8Frame" inherits="ClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="ClassSwapComboItem9Frame" inherits="ClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="ClassSwapComboItem10Frame" inherits="ClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="ClassSwapComboItem11Frame" inherits="ClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="ClassSwapComboItem12Frame" inherits="ClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="ClassSwapComboItem13Frame" inherits="ClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="ClassSwapComboItem14Frame" inherits="ClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="ClassSwapComboItem15Frame" inherits="ClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="ClassSwapComboItem16Frame" inherits="ClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="ClassSwapComboItem17Frame" inherits="ClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="ClassSwapComboItem18Frame" inherits="ClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="ClassSwapComboItem19Frame" inherits="ClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="ClassSwapComboItem20Frame" inherits="ClassSwapClassComboItem" hidden="true" />
+		        </Frames>	       
+        	</Frame>
+        	<!-- Add new class combo -->
+        	<Frame name="ClassSwapFooterFrame">
+        		<Anchors>
+	            	<Anchor point="TOP" relativePoint="TOP">
+	            		<Offset>
+	                    	<AbsDimension x="0" y="300"/>
+	                	</Offset>
+	            	</Anchor>
+	        	</Anchors>
+	        	<Frames>
+	        		<Frame inherits="ClassSwapSeparator">
+		        		<Anchors>
+				            <Anchor point="TOP" relativePoint="TOP" relativeTo="ClassSwapFooterFrame" />
+				        </Anchors>
+				        <Layers>
+				            <Layer level="ARTWORK">
+				                <FontString inherits="GameFontHighlight" text="## Add new class combo">
+				                    <Anchors>
+				                        <Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="ClassSwapFooterFrame">
+				                        	<Offset>
+							                    <AbsDimension x="10" y="15"/>
+							                </Offset>
+				                        </Anchor>
+				                    </Anchors>
+				                </FontString>
+				            </Layer>		  
+				        </Layers>
+		        	</Frame>
+		        	<Frame name="ClassSwap_AddCombo_MainClassSelectorFrame" inherits="UIDropDownMenuTemplate">
+						<Anchors>
+							<Anchor point="TOPLEFT">
+								<Offset>
+									<AbsDimension x="10" y="50"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Layers>
+				            <Layer level="ARTWORK">
+				                <FontString inherits="GameFontHighlight" text="Main Class:">
+				                    <Anchors>
+				                        <Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="ClassSwap_AddCombo_MainClassSelectorFrame">
+				                        	<Offset>
+							                    <AbsDimension x="7" y="-13"/>
+							                </Offset>
+				                        </Anchor>
+				                    </Anchors>
+				                </FontString>
+				            </Layer>		  
+				        </Layers>
+					</Frame>
+					<Frame name="ClassSwap_AddCombo_SubClassSelectorFrame" inherits="UIDropDownMenuTemplate">
+						<Anchors>
+							<Anchor point="TOPLEFT">
+								<Offset>
+									<AbsDimension x="160" y="50"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Layers>
+				            <Layer level="ARTWORK">
+				                <FontString inherits="GameFontHighlight" text="Sub Class:">
+				                    <Anchors>
+				                        <Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="ClassSwap_AddCombo_SubClassSelectorFrame">
+				                        	<Offset>
+							                    <AbsDimension x="7" y="-13"/>
+							                </Offset>
+				                        </Anchor>
+				                    </Anchors>
+				                </FontString>
+				            </Layer>		  
+				        </Layers>
+					</Frame>
+					<Button inherits="UIPanelButtonTemplate" enableMouse="true" text="Add">
+				        <Size>
+				            <AbsDimension x="75" y="25"/>
+				        </Size>
+				        <Anchors>
+				            <Anchor point="TOPRIGHT" relativePoint="TOPRIGHT">
+				            	<Offset>
+				                    <AbsDimension x="-15" y="50"/>
+				                </Offset>
+				            </Anchor>
+				        </Anchors>
+				        <Scripts>
+		                    <OnClick>
+		                        ClassSwap.saveSelectedClassCombo()
+		                    </OnClick>
+		                </Scripts>
+				    </Button>
+	        	</Frames>
+        	</Frame>
+        </Frames>
+	</Frame>
+
+
+
+
+
+
+
+
+
+
+
+
+</Ui>

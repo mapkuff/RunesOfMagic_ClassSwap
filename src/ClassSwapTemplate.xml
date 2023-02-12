@@ -1,0 +1,81 @@
+<Ui xmlns="http://www.runewaker.com/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.runewaker.com/UI.xsd">
+
+	<Button name="ClassSwapBtn" inherits="UIPanelButtonTemplate" enableMouse="true" virtual="true">
+        <Size>
+            <AbsDimension x="100" y="20"/>
+        </Size>
+        <Anchors>
+            <Anchor point="TOPRIGHT" relativePoint="TOPRIGHT">
+            	<Offset>
+                    <AbsDimension x="-30" y="-5"/>
+                </Offset>
+            </Anchor>
+        </Anchors>
+    </Button>
+
+    <Frame name="ClassSwapSeparator" virtual="true">
+		<Size>
+            <AbsDimension x="400" y="2"/>
+        </Size>
+        <Layers>
+            <Layer level="ARTWORK">
+                <FontString inherits="GameFontHighlight" text="___________________________________________________________">
+                    <Anchors>
+                        <Anchor point="CENTER" relativePoint="CENTER"/>
+                    </Anchors>
+                </FontString>
+            </Layer>
+        </Layers>
+	</Frame>
+
+    <Frame name="ClassSwapClassComboItem" virtual="true">
+        <Anchors>
+            <Anchor point="TOP" relativePoint="TOP">
+                <Offset>
+                    <AbsDimension x="10" y="20"/>
+                </Offset>
+            </Anchor>
+        </Anchors>
+        <Layers>
+            <Layer level="ARTWORK">
+                <FontString name="$parent_Text" inherits="GameFontHighlight" text="1. ===> [K/M] Knight / Mage">
+                    <Anchors>
+                        <Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+                            <Offset>
+                                <AbsDimension x="25" y="0"/>
+                            </Offset>
+                        </Anchor>
+                    </Anchors>
+                </FontString>
+            </Layer>                
+        </Layers>
+        <Frames>
+            <Button name="$parent_Btn" inherits="ClassSwapBtn" text="Swap to K/M">
+                <Scripts>
+                    <OnClick>
+                        ClassSwap.SwapClassCombo(this)
+                    </OnClick>
+                </Scripts>
+            </Button>
+            <Button name="$parent_RemoveBtn" inherits="UIPanelCloseButtonTemplate" enableMouse="true">
+                <Size>
+                    <AbsDimension x="20" y="20"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="0" y="0"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnClick>
+                        ClassSwap.RemoveClassCombo(this)
+                    </OnClick>
+                </Scripts>
+            </Button>
+        </Frames>              
+    </Frame>
+
+
+</Ui>
