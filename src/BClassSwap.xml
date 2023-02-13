@@ -1,13 +1,13 @@
 <Ui xmlns="http://www.runewaker.com/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.runewaker.com/UI.xsd">
 
-	<Script file="ClassSwap.lua"/>
-	<Frame parent="UIParent" name="ClassSwapFrame" hidden="true">
+	<!-- <Script file="BClassSwap.lua"/> -->
+	<Frame parent="UIParent" name="BClassSwapFrame" hidden="true">
 		<Scripts>
 			<OnLoad>
-				ClassSwap.onLoad(this)
+				BClassSwap.onLoad(this)
 			</OnLoad>
 			<OnEvent>
-				ClassSwap.onEvent(this, event)
+				BClassSwap.onEvent(this, event)
 			</OnEvent>
 		</Scripts>
 		<Size>
@@ -66,7 +66,7 @@
 		        </Layers>
         	</Frame>
         	<!-- CURRENT CLASS FRAME -->
-        	<Frame name="ClassSwapCurrentClassFrame">
+        	<Frame name="BClassSwapCurrentClassFrame">
         		<Anchors>
 		            <Anchor point="TOP" relativePoint="TOP">
 		            	<Offset>
@@ -116,7 +116,7 @@
         	</Frame>
 
         	<!-- SEPARATOR -->
-        	<Frame inherits="ClassSwapSeparator">
+        	<Frame inherits="BClassSwapSeparator">
         		<Anchors>
 		            <Anchor point="TOP" relativePoint="TOP">
 		            	<Offset>
@@ -127,7 +127,7 @@
         	</Frame>
 
         	<!-- SAVED CLASS COMBO !! -->
-        	<Frame name="ClassSwapClassComboFrame">
+        	<Frame name="BClassSwapClassComboFrame">
         		<Anchors>
 		            <Anchor point="TOP" relativePoint="TOP">
 		            	<Offset>
@@ -145,30 +145,30 @@
 		            </Layer>		  
 		        </Layers>	
 		        <Frames>
-		        	<Frame name="ClassSwapComboItem1Frame" inherits="ClassSwapClassComboItem" hidden="true" />
-		        	<Frame name="ClassSwapComboItem2Frame" inherits="ClassSwapClassComboItem" hidden="true" />
-		        	<Frame name="ClassSwapComboItem3Frame" inherits="ClassSwapClassComboItem" hidden="true" />
-		        	<Frame name="ClassSwapComboItem4Frame" inherits="ClassSwapClassComboItem" hidden="true" />
-		        	<Frame name="ClassSwapComboItem5Frame" inherits="ClassSwapClassComboItem" hidden="true" />
-		        	<Frame name="ClassSwapComboItem6Frame" inherits="ClassSwapClassComboItem" hidden="true" />
-		        	<Frame name="ClassSwapComboItem7Frame" inherits="ClassSwapClassComboItem" hidden="true" />
-		        	<Frame name="ClassSwapComboItem8Frame" inherits="ClassSwapClassComboItem" hidden="true" />
-		        	<Frame name="ClassSwapComboItem9Frame" inherits="ClassSwapClassComboItem" hidden="true" />
-		        	<Frame name="ClassSwapComboItem10Frame" inherits="ClassSwapClassComboItem" hidden="true" />
-		        	<Frame name="ClassSwapComboItem11Frame" inherits="ClassSwapClassComboItem" hidden="true" />
-		        	<Frame name="ClassSwapComboItem12Frame" inherits="ClassSwapClassComboItem" hidden="true" />
-		        	<Frame name="ClassSwapComboItem13Frame" inherits="ClassSwapClassComboItem" hidden="true" />
-		        	<Frame name="ClassSwapComboItem14Frame" inherits="ClassSwapClassComboItem" hidden="true" />
-		        	<Frame name="ClassSwapComboItem15Frame" inherits="ClassSwapClassComboItem" hidden="true" />
-		        	<Frame name="ClassSwapComboItem16Frame" inherits="ClassSwapClassComboItem" hidden="true" />
-		        	<Frame name="ClassSwapComboItem17Frame" inherits="ClassSwapClassComboItem" hidden="true" />
-		        	<Frame name="ClassSwapComboItem18Frame" inherits="ClassSwapClassComboItem" hidden="true" />
-		        	<Frame name="ClassSwapComboItem19Frame" inherits="ClassSwapClassComboItem" hidden="true" />
-		        	<Frame name="ClassSwapComboItem20Frame" inherits="ClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="BClassSwapComboItem1Frame" inherits="BClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="BClassSwapComboItem2Frame" inherits="BClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="BClassSwapComboItem3Frame" inherits="BClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="BClassSwapComboItem4Frame" inherits="BClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="BClassSwapComboItem5Frame" inherits="BClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="BClassSwapComboItem6Frame" inherits="BClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="BClassSwapComboItem7Frame" inherits="BClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="BClassSwapComboItem8Frame" inherits="BClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="BClassSwapComboItem9Frame" inherits="BClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="BClassSwapComboItem10Frame" inherits="BClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="BClassSwapComboItem11Frame" inherits="BClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="BClassSwapComboItem12Frame" inherits="BClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="BClassSwapComboItem13Frame" inherits="BClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="BClassSwapComboItem14Frame" inherits="BClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="BClassSwapComboItem15Frame" inherits="BClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="BClassSwapComboItem16Frame" inherits="BClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="BClassSwapComboItem17Frame" inherits="BClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="BClassSwapComboItem18Frame" inherits="BClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="BClassSwapComboItem19Frame" inherits="BClassSwapClassComboItem" hidden="true" />
+		        	<Frame name="BClassSwapComboItem20Frame" inherits="BClassSwapClassComboItem" hidden="true" />
 		        </Frames>	       
         	</Frame>
         	<!-- Add new class combo -->
-        	<Frame name="ClassSwapFooterFrame">
+        	<Frame name="BClassSwapFooterFrame">
         		<Anchors>
 	            	<Anchor point="TOP" relativePoint="TOP">
 	            		<Offset>
@@ -177,15 +177,15 @@
 	            	</Anchor>
 	        	</Anchors>
 	        	<Frames>
-	        		<Frame inherits="ClassSwapSeparator">
+	        		<Frame inherits="BClassSwapSeparator">
 		        		<Anchors>
-				            <Anchor point="TOP" relativePoint="TOP" relativeTo="ClassSwapFooterFrame" />
+				            <Anchor point="TOP" relativePoint="TOP" relativeTo="BClassSwapFooterFrame" />
 				        </Anchors>
 				        <Layers>
 				            <Layer level="ARTWORK">
 				                <FontString inherits="GameFontHighlight" text="## Add new class combo">
 				                    <Anchors>
-				                        <Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="ClassSwapFooterFrame">
+				                        <Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="BClassSwapFooterFrame">
 				                        	<Offset>
 							                    <AbsDimension x="10" y="15"/>
 							                </Offset>
@@ -195,7 +195,7 @@
 				            </Layer>		  
 				        </Layers>
 		        	</Frame>
-		        	<Frame name="ClassSwap_AddCombo_MainClassSelectorFrame" inherits="UIDropDownMenuTemplate">
+		        	<Frame name="BClassSwap_AddCombo_MainClassSelectorFrame" inherits="UIDropDownMenuTemplate">
 						<Anchors>
 							<Anchor point="TOPLEFT">
 								<Offset>
@@ -207,7 +207,7 @@
 				            <Layer level="ARTWORK">
 				                <FontString inherits="GameFontHighlight" text="Main Class:">
 				                    <Anchors>
-				                        <Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="ClassSwap_AddCombo_MainClassSelectorFrame">
+				                        <Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="BClassSwap_AddCombo_MainClassSelectorFrame">
 				                        	<Offset>
 							                    <AbsDimension x="7" y="-13"/>
 							                </Offset>
@@ -217,7 +217,7 @@
 				            </Layer>		  
 				        </Layers>
 					</Frame>
-					<Frame name="ClassSwap_AddCombo_SubClassSelectorFrame" inherits="UIDropDownMenuTemplate">
+					<Frame name="BClassSwap_AddCombo_SubClassSelectorFrame" inherits="UIDropDownMenuTemplate">
 						<Anchors>
 							<Anchor point="TOPLEFT">
 								<Offset>
@@ -229,7 +229,7 @@
 				            <Layer level="ARTWORK">
 				                <FontString inherits="GameFontHighlight" text="Sub Class:">
 				                    <Anchors>
-				                        <Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="ClassSwap_AddCombo_SubClassSelectorFrame">
+				                        <Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="BClassSwap_AddCombo_SubClassSelectorFrame">
 				                        	<Offset>
 							                    <AbsDimension x="7" y="-13"/>
 							                </Offset>
@@ -252,7 +252,7 @@
 				        </Anchors>
 				        <Scripts>
 		                    <OnClick>
-		                        ClassSwap.saveSelectedClassCombo()
+		                        BClassSwap.saveSelectedClassCombo()
 		                    </OnClick>
 		                </Scripts>
 				    </Button>

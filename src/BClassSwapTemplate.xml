@@ -1,6 +1,6 @@
 <Ui xmlns="http://www.runewaker.com/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.runewaker.com/UI.xsd">
 
-	<Button name="ClassSwapBtn" inherits="UIPanelButtonTemplate" enableMouse="true" virtual="true">
+	<Button name="BClassSwapBtn" inherits="UIPanelButtonTemplate" enableMouse="true" virtual="true">
         <Size>
             <AbsDimension x="100" y="20"/>
         </Size>
@@ -13,7 +13,7 @@
         </Anchors>
     </Button>
 
-    <Frame name="ClassSwapSeparator" virtual="true">
+    <Frame name="BClassSwapSeparator" virtual="true">
 		<Size>
             <AbsDimension x="400" y="2"/>
         </Size>
@@ -28,7 +28,7 @@
         </Layers>
 	</Frame>
 
-    <Frame name="ClassSwapClassComboItem" virtual="true">
+    <Frame name="BClassSwapClassComboItem" virtual="true">
         <Anchors>
             <Anchor point="TOP" relativePoint="TOP">
                 <Offset>
@@ -50,10 +50,10 @@
             </Layer>                
         </Layers>
         <Frames>
-            <Button name="$parent_Btn" inherits="ClassSwapBtn" text="Swap to K/M">
+            <Button name="$parent_Btn" inherits="BClassSwapBtn" text="Swap to K/M">
                 <Scripts>
                     <OnClick>
-                        ClassSwap.SwapClassCombo(this)
+                        BClassSwap.SwapClassCombo(this)
                     </OnClick>
                 </Scripts>
             </Button>
@@ -70,7 +70,7 @@
                 </Anchors>
                 <Scripts>
                     <OnClick>
-                        ClassSwap.RemoveClassCombo(this)
+                        BClassSwap.RemoveClassCombo(this)
                     </OnClick>
                 </Scripts>
             </Button>
